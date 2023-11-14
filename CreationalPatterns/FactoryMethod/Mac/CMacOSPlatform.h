@@ -8,7 +8,7 @@
 #ifndef CMAC_OS_PLATFORM_H
 #define CMAC_OS_PLATFORM_H
 
-#include "IPlatformInterface.h"
+#include "../IPlatformInterface.h"
 
 class CMacOSPlatform: public IPlatformInterface
 {

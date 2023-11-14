@@ -8,7 +8,7 @@
 #ifndef CMAC_OS_MEMORY_IMPLEMENTATION_H
 #define CMAC_OS_MEMORY_IMPLEMENTATION_H
 
-#include "IMemoryManagementInterface.h"
+#include "../IMemoryManagementInterface.h"
 
 class CMacOSMemoryImplementation: public IMemoryManagementInterface 
 {

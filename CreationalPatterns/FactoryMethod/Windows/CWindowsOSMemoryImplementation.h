@@ -8,7 +8,7 @@
 #ifndef CWINDOWS_OS_MEMORY_IMPLEMENTATION_H
 #define CWINDOWS_OS_MEMORY_IMPLEMENTATION_H
 
-#include "IMemoryManagementInterface.h"
+#include "../IMemoryManagementInterface.h"
 
 class CWindowsOSMemoryImplementation: public IMemoryManagementInterface 
 {

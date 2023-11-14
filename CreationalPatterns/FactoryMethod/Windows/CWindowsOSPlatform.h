@@ -8,7 +8,7 @@
 #ifndef CWINDOW_OS_PLATFORM_H
 #define CWINDOW_OS_PLATFORM_H
 
-#include "IPlatformInterface.h"
+#include "../IPlatformInterface.h"
 
 class CWindowsOSPlatform: public IPlatformInterface
 {
