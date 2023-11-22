@@ -1,5 +1,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
+# Adding a link check
+set(CMAKE_CXX_CPPLINT "cpplint")
+
 # Set the project name
 PROJECT(AbstractfactoryDesignPattern)
 

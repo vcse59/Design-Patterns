@@ -5,32 +5,29 @@
 //  Created by Vivek Yadav on 06/19/20.
 //  Copyright © 2020 Vivek Yadav. All rights reserved.
 
-#include <iostream>
-#include <unistd.h>
 #include "CWindowsOSPlatform.h"
 #include "CWindowsOSMemoryImplementation.h"
 #include "CWindowsOSCPUImplementation.h"
+#include <unistd.h>
+#include <iostream>
+#include <memory>
 
 // Implements constructor
-CWindowsOSPlatform::CWindowsOSPlatform():IPlatformInterface()
-{
+CWindowsOSPlatform::CWindowsOSPlatform():IPlatformInterface() {
     std::cout << "Entering CWindowsOSPlatform constructor" << std::endl;
 }
 
 // Implements destructor
-CWindowsOSPlatform::~CWindowsOSPlatform()
-{
+CWindowsOSPlatform::~CWindowsOSPlatform() {
     std::cout << "Entering CWindowsOSPlatform destructor" << std::endl;
 }
 
-SIMemoryManagementInterface CWindowsOSPlatform::createMemory()
-{
+SIMemoryManagementInterface CWindowsOSPlatform::createMemory() {
     std::cout << "Entering CWindowsOSPlatform::createMemory" << std::endl;
     return std::make_shared<CWindowsOSMemoryImplementation>();
 }
 
-SICPUManagementInterface CWindowsOSPlatform::createCPU()
-{
+SICPUManagementInterface CWindowsOSPlatform::createCPU() {
     std::cout << "Entering CWindowsOSPlatform::createCPU" << std::endl;
     return std::make_shared<CWindowsOSCPUImplementation>();
 }
