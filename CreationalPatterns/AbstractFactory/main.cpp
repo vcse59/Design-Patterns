@@ -25,9 +25,9 @@ int main(int argc, const char * argv[]) {
     }
 
     PLATFORM_TYPE platformType = UNKNOWN;
-    if (strcmp(argv[1], "mac") == 0) {
+    if (strcasecmp(argv[1], "mac") == 0) {
         platformType = MAC_OS;
-    } else if (strcmp(argv[1], "windows") == 0) {
+    } else if (strcasecmp(argv[1], "windows") == 0) {
         platformType = WINDOWS_OS;
     } else {
         std::cout << "ERROR : Invalid platform name" << std::endl;
