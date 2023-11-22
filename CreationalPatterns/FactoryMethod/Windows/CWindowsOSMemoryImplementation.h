@@ -15,14 +15,14 @@ class CWindowsOSMemoryImplementation: public IMemoryManagementInterface
     // This interface implements memory operations required for Windows OS platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	CWindowsOSMemoryImplementation();
+        // Defining constuctor to initialize class member variables 
+    CWindowsOSMemoryImplementation();
 
-    	// Defining destructor to perform cleanup
-	virtual ~CWindowsOSMemoryImplementation();
+        // Defining destructor to perform cleanup
+    virtual ~CWindowsOSMemoryImplementation();
 
     protected:
-	// Factory method
-	virtual void performMemoryCleanup();
+    // Factory method
+    virtual void performMemoryCleanup();
 };
 #endif

@@ -36,26 +36,26 @@ int main(int argc, const char * argv[]) {
     
     if (platformType == MAC_OS)
     {
-    	lPlatformObject  =  new CMacOSPlatform();
+        lPlatformObject  =  new CMacOSPlatform();
     }
     else if (platformType == WINDOWS_OS)
     {
-    	lPlatformObject  =  new CWindowsOSPlatform();
+        lPlatformObject  =  new CWindowsOSPlatform();
     }
     else
     {
-	    std::cout << "Invalid platform name...terminate the program" << std::endl;
+        std::cout << "Invalid platform name...terminate the program" << std::endl;
     }
 
     if (lPlatformObject != nullptr)
     {
-    	IMemoryManagementInterface* lPlatformMemoryObject = lPlatformObject->createMemoryObject();
-    	lPlatformMemoryObject->performMemoryCleanup();
+        IMemoryManagementInterface* lPlatformMemoryObject = lPlatformObject->createMemoryObject();
+        lPlatformMemoryObject->performMemoryCleanup();
     }
 
     if (lPlatformObject != nullptr)
     {
-	    delete lPlatformObject;
+        delete lPlatformObject;
     }
     lPlatformObject = nullptr;
     return 0;

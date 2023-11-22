@@ -15,14 +15,14 @@ class CMacOSPlatform: public IPlatformInterface
     // This interface implements Factory method required for Mac OS platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	CMacOSPlatform();
+        // Defining constuctor to initialize class member variables 
+    CMacOSPlatform();
 
-    	// Defining destructor to perform cleanup
-	virtual ~CMacOSPlatform();
+        // Defining destructor to perform cleanup
+    virtual ~CMacOSPlatform();
 
     protected:
-	// Factory method
-	virtual IMemoryManagementInterface* createMemoryObject();
+    // Factory method
+    virtual IMemoryManagementInterface* createMemoryObject();
 };
 #endif

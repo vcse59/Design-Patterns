@@ -16,15 +16,15 @@ class IMemoryManagementInterface
     // for different platform like MacOS, Windows, Linux, VxWorks
     
     public:
-    	// Virtual constructor to restrict class to behave as abstract
-		IMemoryManagementInterface(){};
+        // Virtual constructor to restrict class to behave as abstract
+        IMemoryManagementInterface(){};
 
-		// Virtual constructor to handle memory management where destructor of
-		// derived call first to make sure deallocation happens gracefully
-		virtual ~IMemoryManagementInterface(){};
+        // Virtual constructor to handle memory management where destructor of
+        // derived call first to make sure deallocation happens gracefully
+        virtual ~IMemoryManagementInterface(){};
 
-		// Factory method
-		virtual void performMemoryCleanup() = 0;
+        // Factory method
+        virtual void performMemoryCleanup() = 0;
 };
 
 typedef std::shared_ptr<IMemoryManagementInterface> SIMemoryManagementInterface;

@@ -15,14 +15,14 @@ class CMacOSMemoryImplementation: public IMemoryManagementInterface
     // This interface implements memory operations required for Mac OS platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	CMacOSMemoryImplementation();
+        // Defining constuctor to initialize class member variables 
+    CMacOSMemoryImplementation();
 
-    	// Defining destructor to perform cleanup
-	virtual ~CMacOSMemoryImplementation();
+        // Defining destructor to perform cleanup
+    virtual ~CMacOSMemoryImplementation();
 
     protected:
-	// Factory method
-	virtual void performMemoryCleanup();
+    // Factory method
+    virtual void performMemoryCleanup();
 };
 #endif

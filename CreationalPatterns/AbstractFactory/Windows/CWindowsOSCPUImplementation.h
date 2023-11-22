@@ -15,11 +15,11 @@ class CWindowsOSCPUImplementation: public ICPUManagementInterface
     // This interface implements CPU operations required for Windows OS platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	    CWindowsOSCPUImplementation();
+        // Defining constuctor to initialize class member variables 
+        CWindowsOSCPUImplementation();
 
-    	// Defining destructor to perform cleanup
-	    virtual ~CWindowsOSCPUImplementation();
+        // Defining destructor to perform cleanup
+        virtual ~CWindowsOSCPUImplementation();
 
     protected:
         // Factory method

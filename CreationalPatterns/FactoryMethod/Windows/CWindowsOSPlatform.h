@@ -15,14 +15,14 @@ class CWindowsOSPlatform: public IPlatformInterface
     // This interface implements Factory method required for windows platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	CWindowsOSPlatform();
+        // Defining constuctor to initialize class member variables 
+    CWindowsOSPlatform();
 
-    	// Defining destructor to perform cleanup
-	virtual ~CWindowsOSPlatform();
+        // Defining destructor to perform cleanup
+    virtual ~CWindowsOSPlatform();
 
     protected:
-	// Factory method
-	virtual IMemoryManagementInterface* createMemoryObject();
+    // Factory method
+    virtual IMemoryManagementInterface* createMemoryObject();
 };
 #endif

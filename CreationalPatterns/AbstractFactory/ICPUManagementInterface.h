@@ -16,15 +16,15 @@ class ICPUManagementInterface
     // for different platform like MacOS, Windows, Linux, VxWorks
     
     public:
-    	// Virtual constructor to restrict class to behave as abstract
-		ICPUManagementInterface(){};
+        // Virtual constructor to restrict class to behave as abstract
+        ICPUManagementInterface(){};
 
-		// Virtual constructor to handle CPU management where destructor of
-		// derived call first to make sure deallocation happens gracefully
-		virtual ~ICPUManagementInterface(){};
+        // Virtual constructor to handle CPU management where destructor of
+        // derived call first to make sure deallocation happens gracefully
+        virtual ~ICPUManagementInterface(){};
 
-		// Factory method
-		virtual void performCPUCleanup() = 0;
+        // Factory method
+        virtual void performCPUCleanup() = 0;
 };
 
 typedef std::shared_ptr<ICPUManagementInterface> SICPUManagementInterface;

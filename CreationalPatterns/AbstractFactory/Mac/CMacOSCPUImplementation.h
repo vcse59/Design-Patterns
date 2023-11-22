@@ -15,11 +15,11 @@ class CMacOSCPUImplementation: public ICPUManagementInterface
     // This interface implements CPU operations required for Mac OS platform
     
     public:
-    	// Defining constuctor to initialize class member variables 
-	    CMacOSCPUImplementation();
+        // Defining constuctor to initialize class member variables 
+        CMacOSCPUImplementation();
 
-    	// Defining destructor to perform cleanup
-	    virtual ~CMacOSCPUImplementation();
+        // Defining destructor to perform cleanup
+        virtual ~CMacOSCPUImplementation();
 
     protected:
         // Factory method
