@@ -8,28 +8,43 @@
 
 #include <iostream>
 #include <unistd.h>
+#include <string.h>
 #include "CMacOSPlatform.h"
 #include "CWindowsOSPlatform.h"
-#include "CPlatformEnum.h"
+#include "CPlatformType.h"
 
 int main(int argc, const char * argv[]) {
 
-    //PLATFORM_NAME platformName = WINDOWS_OS;
-    PLATFORM_NAME platformName = MAC_OS;
+    if (argc < 2)
+    {
+        std::cout << "ERROR : Empty platform type is not supported" << std::endl;
+        std::cout << "Usage : ./factoryDP <platform type(mac/windows)>" << std::endl;
+        return -1;
+    }
+
+    PLATFORM_TYPE platformType = UNKNOWN;
+    if (strcmp(argv[1], "mac") == 0)
+    {
+        platformType = MAC_OS;
+    }
+    else if (strcmp(argv[1], "windows") == 0)
+    {
+        platformType = WINDOWS_OS;
+    }
 
     IPlatformInterface *lPlatformObject = nullptr;
     
-    if (platformName == MAC_OS)
+    if (platformType == MAC_OS)
     {
     	lPlatformObject  =  new CMacOSPlatform();
     }
-    else if (platformName == WINDOWS_OS)
+    else if (platformType == WINDOWS_OS)
     {
     	lPlatformObject  =  new CWindowsOSPlatform();
     }
     else
     {
-	std::cout << "Invalid platform name...terminate the program" << std::endl;
+	    std::cout << "Invalid platform name...terminate the program" << std::endl;
     }
 
     if (lPlatformObject != nullptr)
@@ -40,7 +55,7 @@ int main(int argc, const char * argv[]) {
 
     if (lPlatformObject != nullptr)
     {
-	delete lPlatformObject;
+	    delete lPlatformObject;
     }
     lPlatformObject = nullptr;
     return 0;
